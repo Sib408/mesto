@@ -1,4 +1,4 @@
-.popup__unput {
+.popup__input {
   width: 100%;
   font-size: 14px;
   line-height: 17px;
@@ -10,6 +10,6 @@
 
 }
 
-.popup__unput:not(:last-of-type) {
+.popup__input:not(:last-of-type) {
   margin-bottom: 28px;
 }
