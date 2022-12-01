@@ -1,0 +1,21 @@
+.page__container {
+  max-width: 880px;
+  min-width: 320px;
+  margin: 0 auto;
+  /* padding: 0 200px; */
+  /* box-sizing: border-box; */
+  }
+  /* padding:  92px max(48px, (100% - 984px)/2); */
+  /* max(200px, (100% - 880px)/2) */
+  @media screen and (max-width: 930px) {
+    .page__container {
+      padding: 0 19px;
+    /* padding: 0 calc(19px + (200 - 19) * ((100vw - 320px) / (1280 - 320))); */
+  }
+}
+@media screen and (max-width: 580px) {
+  .page__container {
+    padding: 0;
+
+}
+}

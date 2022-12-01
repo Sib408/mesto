@@ -1,0 +1,22 @@
+.popup__container {
+  position: relative;
+  top: 195px;
+  max-width: 430px;
+  max-height: 330px;
+  background: #fff;
+  color: #000;
+  font-family: 'Inter', Arial, sans-serif;
+  padding: 34px 36px 37px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 576px) {
+  .popup__container {
+    top: 53px;
+    max-width: calc(282px + (430 - 282) * ((100vw - 320px) / (576 - 320)));
+    max-height: calc(322px + (330 - 322) * ((100vw - 320px) / (576 - 320)));
+    padding: calc(25px + (34 - 25) * ((100vw - 320px) / (576 - 320))) calc(22px + (36 - 22) * ((100vw - 320px) / (576 - 320)));
+  }
+}
