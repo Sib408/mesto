@@ -1,6 +1,6 @@
-const editButton = document.querySelector(".button_edit");
+const editButton = document.querySelector(".button_type_edit");
 const popup = document.querySelector(".popup");
-const popupClose = document.querySelector(".popup__button_close");
+const popupClose = document.querySelector(".popup__button_type_close");
 
 editButton.addEventListener("click", openPopup);
 popupClose.addEventListener("click", closePopup);

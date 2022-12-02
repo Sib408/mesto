@@ -1,15 +1,19 @@
-.popup__button_close {
+.popup__button_type_close {
   width: 32px;
   height: 32px;
   position: absolute;
   top: -40px;
   right: -40px;
-  background: center / 32px url(../../../image/button_сlosed.svg) no-repeat;
+  background: center / 32px url(../../../../image/button_сlosed.svg) no-repeat;
   border: none;
 }
 
+.popup__button_type_close:hover {
+  opacity: .7;
+}
+
 @media screen and (max-width: 576px) {
-  .popup__button_close {
+  .popup__button_type_close {
     width: calc(20px + (32 - 20) * ((100vw - 320px) / (576 - 320)));
     height: calc(20px + (32 - 20) * ((100vw - 320px) / (576 - 320)));
     top: -36px;

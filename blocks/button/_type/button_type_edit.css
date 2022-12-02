@@ -1,17 +1,17 @@
-.button_edit {
+.button_type_edit {
   width: 24px;
   height: 24px;
   margin-bottom: 8px;
   border: 1px solid #fff;
-  background: transparent center / 10px url(../.././image/button_edit.png) no-repeat;
+  background: transparent center / 10px url(../../../image/button_edit.png) no-repeat;
 }
 
-.button_edit:hover {
+.button_type_edit:hover {
   opacity: .6;
 }
 
 @media screen and (max-width: 580px) {
-  .button_edit {
+  .button_type_edit {
     width: calc(18px + (24 - 18) * ((100vw - 320px) / (580 - 320)));
     height: calc(18px + (24 - 18) * ((100vw - 320px) / (580 - 320)));
     background-size: calc(7.5px + (10 - 7.5) * ((100vw - 320px) / (580 - 320)));

@@ -2,6 +2,7 @@
   font-size: 18px;
   line-height: 22px;
   margin: 10px 0 0;
+  max-width: 336px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -26,6 +27,7 @@
 @media screen and (max-width: 480px) {
   .profile__description {
     margin: 7px 0 33px;
+    max-width: max(100vw - (calc(22px + (36 - 22) * ((100vw - 320px) / (576 - 320))) * 2));
 
   }
 }
