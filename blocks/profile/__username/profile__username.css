@@ -18,6 +18,12 @@
   }
 }
 
+@media screen and (max-width: 760px) {
+  .profile__username {
+  max-width: calc(220px + (294 - 220) * ((100vw - 320px) / (760 - 320)));
+  }
+}
+
 @media screen and (max-width: 670px) {
   .profile__username {
     text-align: center;
