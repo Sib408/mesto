@@ -1,0 +1,8 @@
+.popup__container_card_open {
+  max-width: 75vw;
+  width: 100%;
+  max-height: 75vh;
+  border-radius: 0;
+  background: none;
+
+}

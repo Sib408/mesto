@@ -6,3 +6,9 @@
 
 }
 
+@media screen and (max-width: 480px) {
+  .elements {
+    gap: 20px 0;
+  }
+
+}
