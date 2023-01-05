@@ -117,7 +117,7 @@ const addCard = (event) => {
   event.preventDefault();
   const cardLink = urlCardInput.value;
   const cardName = nameCardInput.value;
-  renderCard({ name: cardName, link: cardLink });
+  renderCard({name: cardName, link: cardLink});
 
   urlCardInput.value = "";
   nameCardInput.value = "";
