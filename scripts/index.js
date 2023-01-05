@@ -77,8 +77,9 @@ const initialCards = [
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
   },
 ];
-const imageLink = document.querySelector(".element__img");
-const imageName = document.querySelector(".element__title");
+
+const imageLink = document.querySelector(".popup__img-card");
+const imageName = document.querySelector(".popup__title-card");
 
 const elementsContainer = document.querySelector(".elements");
 const template = document.querySelector(".template");
@@ -104,11 +105,11 @@ const createCard = (element) => {
 
   return card;
 };
-// добавление  в контейнер
+
 const renderCard = (card) => {
   elementsContainer.prepend(createCard(card));
 };
-// отображение на странице
+
 initialCards.forEach((card) => {
   renderCard(card);
 });
@@ -131,7 +132,6 @@ let urlCardInput = document.querySelector(".popup__input_type_url");
 
 formAdd.addEventListener("submit", addCard);
 
-// like
 function likeActive(event) {
   event.target.classList.toggle("element__like_active");
 }

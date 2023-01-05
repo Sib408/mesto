@@ -1,7 +1,6 @@
-.element__img-popup {
+.popup__img-card {
   max-width: 75vw;
   max-height: 75vh;
   height: 100%;
-  border-radius: 0;
   object-fit: contain;
 }
