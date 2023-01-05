@@ -5,7 +5,9 @@ const popups = document.querySelectorAll(".popup");
 const addPopup = document.querySelector("#add_card");
 const editPopup = document.querySelector("#edit_profile");
 const cardOpenPopup = document.querySelector("#card_open");
-const popupCloseButtons = document.querySelectorAll(".popup__button_type_close");
+const popupCloseButtons = document.querySelectorAll(
+  ".popup__button_type_close"
+);
 
 editButton.addEventListener("click", function () {
   nameInput.value = usernameProfile.textContent;
@@ -115,7 +117,7 @@ const addCard = (event) => {
   event.preventDefault();
   const cardLink = urlCardInput.value;
   const cardName = nameCardInput.value;
-  renderCard(cardLink, cardName);
+  renderCard({ name: cardName, link: cardLink });
 
   urlCardInput.value = "";
   nameCardInput.value = "";
