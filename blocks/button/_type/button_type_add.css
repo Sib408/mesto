@@ -4,6 +4,7 @@
   height: 50px;
   border: 1px solid #fff;
   background: transparent center/ 22px url(../../../image/button_add.png) no-repeat;
+  cursor: pointer;
 }
 
 .button_type_add:hover {

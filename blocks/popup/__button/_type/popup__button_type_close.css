@@ -6,6 +6,7 @@
   right: -40px;
   background: center / 32px url(../../../../image/button_сlosed.svg) no-repeat;
   border: none;
+  cursor: pointer;
 }
 
 .popup__button_type_close:hover {

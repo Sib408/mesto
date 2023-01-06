@@ -3,6 +3,7 @@
   height: 19px;
   border: none;
   background: url(../../../image/button_like.svg) no-repeat;
+  cursor: pointer;
 }
 .element__like:hover {
   opacity: .5;

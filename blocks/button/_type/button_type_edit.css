@@ -4,6 +4,7 @@
   margin-bottom: 8px;
   border: 1px solid #fff;
   background: transparent center / 10px url(../../../image/button_edit.png) no-repeat;
+  cursor: pointer;
 }
 
 .button_type_edit:hover {

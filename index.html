@@ -22,9 +22,9 @@
             placeholder="Имя">
           <input type="text" class="popup__input popup__input_type_decsription" name="input-description"
             placeholder="О себе">
-          <button class="popup__button popup__button_type_save" type="submit">Сохранить</button>
+          <button class="popup__button popup__button_type_save" aria-label="Сохранить" type="submit">Сохранить</button>
         </form>
-        <button class="popup__button popup__button_type_close" type="button"></button>
+        <button class="popup__button popup__button_type_close"  aria-label="Закрыть" type="button"></button>
       </div>
     </section>
     <section class="popup" id="add_card">
@@ -35,16 +35,16 @@
             placeholder="Название">
           <input type="url" class="popup__input popup__input_type_url" name="input-url" required
             placeholder="Ссылка на картинку">
-          <button class="popup__button popup__button_type_save" type="submit">Создать</button>
+          <button class="popup__button popup__button_type_save" aria-label="Создать" type="submit">Создать</button>
         </form>
-        <button class="popup__button popup__button_type_close" type="button"></button>
+        <button class="popup__button popup__button_type_close" aria-label="Закрыть" type="button"></button>
       </div>
     </section>
-    <section class="popup" id="card_open">
+    <section class="popup popup__card-open" id="card_open">
       <div class="popup__container popup__container_card_open">
         <img class="popup__img-card" src="#" alt="">
         <h2 class="popup__title-card"></h2>
-        <button class="popup__button popup__button_type_close" type="button"></button>
+        <button class="popup__button popup__button_type_close" aria-label="Закрыть" type="button"></button>
       </div>
     </section>
     <main class="contain">
@@ -71,12 +71,12 @@
       <button class="element__delete" aria-label="Удалить" type="button"></button>
       <div class="element__block">
         <h2 class="element__title"></h2>
-        <button class="element__like" type="button"></button>
+        <button class="element__like" type="button" aria-label="Нравится"></button>
       </div>
     </article>
   </template>
-
-  <script src="./scripts/index.js"></script>
+  <script defer src="./scripts/constants.js"></script>
+  <script defer src="./scripts/index.js"></script>
 </body>
 
 </html>
