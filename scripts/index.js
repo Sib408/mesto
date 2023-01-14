@@ -1,3 +1,12 @@
+const validationConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button_type_submit",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
+
 const editButton = document.querySelector(".button_type_edit");
 const addButton = document.querySelector(".button_type_add");
 
@@ -17,20 +26,37 @@ editButton.addEventListener("click", function () {
 
 addButton.addEventListener("click", () => {
   openPopup(addPopup);
+  toggleButtonState(inputFields, buttonValid, validationConfig);
 });
 
 function openPopup(item) {
   item.classList.add("popup_opened");
+  document.addEventListener("keydown", closePopupEsc);
 }
 
 function closePopup(item) {
   item.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closePopupEsc);
 }
 
 popupCloseButtons.forEach((item) => {
   const popup = item.closest(".popup");
   item.addEventListener("click", () => {
     closePopup(popup);
+  });
+});
+
+function closePopupEsc(evt) {
+  if (evt.key === "Escape") {
+    const popupOpenItem = document.querySelector(".popup_opened");
+    closePopup(popupOpenItem);
+  }
+}
+popups.forEach((item) => {
+  item.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("popup_opened")) {
+      closePopup(item);
+    }
   });
 });
 
@@ -103,8 +129,21 @@ const formAdd = document.querySelector("form[name='form_add']");
 const nameCardInput = document.querySelector(".popup__input_type_name");
 const urlCardInput = document.querySelector(".popup__input_type_url");
 
+const inputFields = Array.from(formAdd.querySelectorAll(".popup__input"));
+const buttonValid = formAdd.querySelector(".popup__button_type_add");
+
 formAdd.addEventListener("submit", addCard);
 
 function clickLike(event) {
   event.target.classList.toggle("element__like_active");
 }
+
+function enableValidation(config) {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
+
+  formList.forEach((formElement) => {
+    setEventListeners(formElement, config);
+  });
+}
+
+enableValidation(validationConfig);

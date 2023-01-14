@@ -1,0 +1,13 @@
+.popup__error_visible {
+  display: block;
+  color: #ff0000;
+  border-top: 1px solid #ff0000;
+  padding-bottom: 20px;
+  font-size: 12px;
+  line-height: 15px;
+
+}
+
+.popup__error_visible:not(:last-of-type) {
+  padding-bottom: 0;
+}

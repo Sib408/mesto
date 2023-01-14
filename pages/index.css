@@ -11,9 +11,15 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_error.css);
+@import url(../blocks/popup/__error/_visible/popup__error_visible.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__button/_type/popup__button_type_save.css);
+
+@import url(../blocks/popup/__button/_type/popup__button_type_submit.css);
+/* @import url(../blocks/popup/__button/_type/popup__button_type_save.css); */
+/* @import url(../blocks/popup/__button/_type/popup__button_type_add.css); */
 @import url(../blocks/popup/__button/_type/popup__button_type_close.css);
+@import url(../blocks/popup/__button/_disabled/popup__button_disabled.css);
 @import url(../blocks/popup/_card-open/popup_card-open.css);
 @import url(../blocks/popup/__container/_card_open/popup__container_card_open.css);
 @import url(../blocks/popup/__img-card/popup__img-card.css);

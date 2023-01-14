@@ -5,11 +5,17 @@
   color: #000;
   border: none;
   outline: none;
-  border-bottom: 1px rgba(0,0,0, .2) solid;
-  padding-bottom: 10px;
+  border-bottom: 1px rgba(0, 0, 0, .2) solid;
+  padding: 13px 0;
+  margin-bottom: 28px
 
 }
 
-.popup__input:not(:last-of-type) {
+
+/* .popup__input:not(:last-of-type) {
   margin-bottom: 28px;
+} */
+
+.popup__input:invalid {
+  margin-bottom: 0;
 }
