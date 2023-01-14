@@ -12,8 +12,6 @@ function hideInputError(formElement, inputElement, config) {
 }
 
 function checkInputValidity(formElement, inputElement, config) {
-  const nameInput = formElement.querySelector("#name");
-
   if (inputElement.validity.valid) {
     hideInputError(formElement, inputElement, config);
   } else {
