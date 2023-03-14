@@ -1,10 +1,11 @@
-import { template, imageLink, imageName, openPopup } from "./index.js";
+import { template } from "./constants.js";
 
-class Card {
-  constructor(data, template) {
+export default class Card {
+  constructor( data , template, handleCardClick) {
     this._image = data.link;
     this._title = data.name;
     this._template = template;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -33,9 +34,9 @@ class Card {
       });
     this._newCard
       .querySelector(".element__img")
-      .addEventListener("click", () => {
-        this._openImage();
-      });
+      .addEventListener("click", () =>
+        this._handleCardClick(this._title, this._image)
+      );
   }
   _clickLike() {
     this._newCard
@@ -48,14 +49,6 @@ class Card {
     this._newCard = null;
   }
 
-  _openImage() {
-    const cardOpenPopup = document.querySelector("#card_open");
-    imageLink.src = this._image;
-    imageLink.alt = this._title;
-    imageName.textContent = this._title;
-    openPopup(cardOpenPopup);
-  }
-
   getView() {
     this._newCard = this._getTemplate();
     this._setData();
@@ -64,4 +57,4 @@ class Card {
     return this._newCard;
   }
 }
-export default Card;
+
