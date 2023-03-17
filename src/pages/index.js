@@ -10,7 +10,7 @@ import {
   descriptionInput,
   elementsContainer,
   formAdd,
-} from "../scripts/constants.js";
+} from "../utils/constants.js";
 import UserInfo from "../scripts/UserInfo.js";
 import Section from "../scripts/Section.js";
 import PopupWithForm from "../scripts/PopupWithForm.js";
@@ -20,11 +20,8 @@ import "../pages/index.css";
 const cardList = new Section(
   {
     items: initialCards.reverse(),
-    renderer: ({ name, link }) => {
-      const card = new Card({ name, link }, ".template", handleCardClick);
-      const cardElement = card.getView();
-
-      cardList.addItem(cardElement);
+    renderer: (cardElement) => {
+      cardList.addItem(createCard(cardElement));
     },
   },
   elementsContainer
@@ -44,43 +41,48 @@ popupEdit.setEventListeners();
 
 editButton.addEventListener("click", () => {
   const { name, description } = userInfo.getUserInfo();
-  nameInput.value = name;
-  descriptionInput.value = description;
-  formEditValidator.resetFormButton();
+  popupEdit.setInputValues({ name, description });
+  formEditValidator.resetValidation();
   popupEdit.open();
 });
 
-function editFormSubmit({ name, description }) {
-  userInfo.setUserInfo(nameInput.value, descriptionInput.value);
-  popupEdit.close();
-}
+function editFormSubmit({name, description}) {
+    userInfo.setUserInfo(name, description );
+     popupEdit.close();
+  }
+
 // popup Add
 
 const popupAdd = new PopupWithForm("#add_card", addFormSubmit);
 popupAdd.setEventListeners();
 
 addButton.addEventListener("click", () => {
-  formAddValidator.resetFormButton();
+  formAddValidator.resetValidation();
   popupAdd.open();
 });
 
-function addFormSubmit(data) {
-  const newCard = new Card(
-    { name: data.name, link: data.link },
-    ".template",
-    handleCardClick
-  );
+function addFormSubmit(values) {
+  const name = values.name;
+  const link = values.link;
+  const newCard = createCard({ name, link });
 
-  cardList.addItem(newCard.getView());
+  cardList.addItem(newCard);
 
   popupAdd.close();
+}
+
+function createCard({ name, link }) {
+  const card = new Card({ name, link }, ".template", handleCardClick);
+  const cardElement = card.getView();
+
+  return cardElement;
 }
 
 const popupWithImage = new PopupWithImage(".popup_card-open");
 popupWithImage.setEventListeners();
 
 function handleCardClick(name, link) {
-  popupWithImage.open(name, link);
+  popupWithImage.open({ name, link });
 }
 
 const formEditValidator = new FormValidator(validationConfig, formEdit);

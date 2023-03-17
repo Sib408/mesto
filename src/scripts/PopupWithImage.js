@@ -1,6 +1,5 @@
 import Popup from "./Popup.js";
 
-
 export default class PopupWithImage extends Popup {
   constructor(popup) {
     super(popup);
@@ -8,16 +7,15 @@ export default class PopupWithImage extends Popup {
     this._name = document.querySelector(".popup__title-card");
   }
 
-
-  open(name, link) {
-    this._popup.classList.add("popup_opened");
+  open({name, link}) {
+    super.open();
     document.addEventListener("keydown", this._handleEscClose);
     this._link.src = link;
     this._link.alt = name;
     this._name.textContent = name;
   }
   close() {
-    this._popup.classList.remove("popup_opened");
+    super.close();
     this._link.src = '';
     this._link.alt = '';
     this._name.textContent = '';
