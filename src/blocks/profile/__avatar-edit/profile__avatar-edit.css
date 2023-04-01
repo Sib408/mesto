@@ -6,7 +6,7 @@
   border-radius: 50%;
   border-style: none;
   background-size: 24px;
-  background: rgba(0, 0, 0, 0.8) url(../../../../image/button_avatar_edit.svg) no-repeat center;
+  background: rgba(0, 0, 0, 0.8) url(../../.././image/button_avatar_edit.svg) no-repeat center;
   transition: .2s;
   opacity: 0;
   cursor: pointer;

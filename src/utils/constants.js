@@ -36,7 +36,7 @@ export const validationConfig = {
 
  export const editButton = document.querySelector(".button_type_edit");
  export const addButton = document.querySelector(".button_type_add");
- export const avatarButton = document.querySelector(".profile__avatar_edit");
+ export const avatarButton = document.querySelector(".profile__avatar-edit");
 
  export const addPopup = document.querySelector("#add_card");
  export const editPopup = document.querySelector("#edit_profile");
