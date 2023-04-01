@@ -12,5 +12,5 @@
   cursor: pointer;
 }
 .profile__avatar-edit:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
