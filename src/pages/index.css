@@ -22,7 +22,7 @@
 @import url(../blocks/popup/__img-card/popup__img-card.css);
 @import url(../blocks/popup/__title-card/popup__title-card.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__avatar/_edit/profile__avatar_edit.css);
+@import url(../blocks/profile/__avatar-edit/profile__avatar-edit.css);
 @import url(../blocks/profile/__username/profile__username.css);
 @import url(../blocks/profile/__description/profile__description.css);
 @import url(../blocks/button/_type/button_type_edit.css);
