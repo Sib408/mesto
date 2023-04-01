@@ -21,9 +21,21 @@
           <input type="text" class="popup__input popup__input_type_username" id="username" name="name" required minlength="2" maxlength="40"
             placeholder="Имя">
             <span class="username-error popup__input-error"></span>
-          <input type="text" class="popup__input popup__input_type_decsription" id="decsription" name="description" required minlength="2" maxlength="200"
+          <input type="text" class="popup__input popup__input_type_decsription" id="decsription" name="about" required minlength="2" maxlength="200"
             placeholder="О себе">
             <span class="decsription-error popup__input-error"></span>
+          <button class="popup__button popup__button_type_submit popup__button_type_save" aria-label="Сохранить" type="submit">Сохранить</button>
+        </form>
+        <button class="popup__button popup__button_type_close"  aria-label="Закрыть" type="button"></button>
+      </div>
+    </section>
+    <section class="popup" id="avatar_profile">
+      <div class="popup__container">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="form_avatar" novalidate>
+          <input type="url" class="popup__input popup__input_type_avatar" id="avatar" name="avatar" required
+            placeholder="Ссылка на картинку">
+            <span class="avatar-error popup__input-error"></span>
           <button class="popup__button popup__button_type_submit popup__button_type_save" aria-label="Сохранить" type="submit">Сохранить</button>
         </form>
         <button class="popup__button popup__button_type_close"  aria-label="Закрыть" type="button"></button>
@@ -44,6 +56,16 @@
         <button class="popup__button popup__button_type_close" aria-label="Закрыть" type="button"></button>
       </div>
     </section>
+    <section class="popup" id="delete_card">
+      <div class="popup__container">
+        <h3 class="popup__title">Вы уверены?</h3>
+        <form class="popup__form" name="form_delete" novalidate>
+
+          <button class="popup__button popup__button_type_submit popup__button_type_delete" aria-label="Удалить" type="submit">Да</button>
+        </form>
+        <button class="popup__button popup__button_type_close"  aria-label="Закрыть" type="button"></button>
+      </div>
+    </section>
     <section class="popup popup_card-open" id="card_open">
       <div class="popup__container popup__container_card_open">
         <img class="popup__img-card" src="#" alt="">
@@ -54,6 +76,8 @@
     <main class="contain">
       <section class="profile">
         <img class="profile__avatar" src="<%=require('./image/kusto.jpg')%>" alt="Аватар">
+        <button class="profile__avatar_edit" type="button" ></button>
+
         <div class="profile__info">
           <h1 class="profile__username">Жак-Ив Кусто</h1>
           <button class="button button_type_edit" type="button" aria-label="Редактировать"></button>
@@ -66,7 +90,7 @@
       </section>
     </main>
     <footer class="footer">
-      <span class="footer__copy">&copy; 2020 Mesto Russia</span>
+      <span class="footer__copy">&copy; 2023 Mesto Russia</span>
     </footer>
   </div>
   <template class="template">
@@ -76,6 +100,8 @@
       <div class="element__block">
         <h2 class="element__title"></h2>
         <button class="element__like" type="button" aria-label="Нравится"></button>
+        <span class="element__like_counter"></span>
+
       </div>
     </article>
   </template>
