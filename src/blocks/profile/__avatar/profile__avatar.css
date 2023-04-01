@@ -7,11 +7,6 @@
   object-fit: cover;
 }
 
-/* .profile__avatar:hover {
-  background:rgba(145, 34, 34, 0.8) url(../../../image/button_edit.png) no-repeat center;
-  cursor: pointer;
-} */
-
 @media screen and (max-width: 670px) {
   .profile__avatar {
     margin-right: 0;
