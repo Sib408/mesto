@@ -33,7 +33,7 @@ Promise.all([api.getInitialCards(), api.getProfile()])
     newUserInfo.setUserInfo(userInfo.name, userInfo.about, userInfo.avatar);
     userId = userInfo._id;
 
-    cardList = new Section(
+     cardList = new Section(
       {
         items: cards.reverse(),
         renderer: createCard,
@@ -116,7 +116,7 @@ const popupAvatar = new PopupWithForm("#avatar_profile", {
     api
       .changeAvatar(avatar)
       .then((res) => {
-        newUserInfo.setUserInfo(res.name, res.link, res.avatar);
+        newUserInfo.setUserInfo(res.name, res.about, res.avatar);
         popupAvatar.close();
       })
       .catch((err) => {
